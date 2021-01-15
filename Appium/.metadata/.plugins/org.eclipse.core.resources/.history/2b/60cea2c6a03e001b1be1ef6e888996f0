@@ -1,0 +1,13 @@
+package com.Package;
+
+import org.testng.annotations.BeforeTest;
+
+public class TransactionHistory extends Login {
+	
+	@BeforeTest()
+	public void Login()
+	{
+		Login();
+	}
+
+}

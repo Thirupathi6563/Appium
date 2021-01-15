@@ -1,0 +1,32 @@
+package com.Package;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.appium.java_client.MobileElement;
+
+public class TransactionHistory extends Login {
+	
+	@Test
+	public void transactionHistory()
+	{
+	
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.Image").click();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		MobileElement TransactionHistory = (MobileElement)driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[4]/android.view.View/android.view.View[2]/android.view.View[3]/android.view.View");
+		TransactionHistory.click();
+		//Select s=new Select(w);
+		//s.selectByVisibleText("");
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[4]/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[15]").click();
+		MobileElement fromdate = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[4]/android.view.View/android.view.View[2]/android.view.View[5]/android.view.View/android.widget.EditText");
+		fromdate.click();
+		driver.findElementByXPath("//android.view.View[text(),'chevron_left']").click();
+		
+	}
+	
+
+}
